@@ -1,0 +1,13 @@
+<div class="card" *ngIf="doctor != null">
+    <div class="card-body">
+        <h2 class="text-info">{{doctor.name}}</h2>
+        <h3>{{doctor.email}}</h3>
+       
+        
+
+
+        <hr>
+
+        <button (click)="prise()" >Prise de rendez vous</button>
+    </div>
+</div>

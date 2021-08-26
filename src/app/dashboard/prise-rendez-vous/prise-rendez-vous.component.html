@@ -1,0 +1,27 @@
+
+<h1 class="text-info">Prenez rapidement un rendez-vous avec votre médecin !</h1>
+<h3>Sélectionnez votre médecin, choisissez la date et heure de votre rdv et recevez votre sms/mail de confirmation. C’est
+aussi simple que ça !</h3>
+
+
+<div class="card">
+    <div class="card-body">
+        <table class="table">
+            <tr>
+                <th>#</th>
+                <th>nom du Professionnel de santé</th>
+                <th>spécialité</th>
+        
+            </tr>
+            <tr *ngFor="let doctor of AllDoctors; let i = index">
+                <td>{{i + 1}}</td>
+                <td>{{doctor.name}}</td>
+                <td>{{doctor.category.name}}</td>
+                <td>
+                    <button class="btn btn-sm btn-primary" (click)="details(doctor.id)">contacter</button>
+                </td>
+        
+            </tr>
+        </table>
+    </div>
+</div>
